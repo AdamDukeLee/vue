@@ -1,0 +1,76 @@
+<div class="container">
+	<ol class="breadcrumb">
+		<li><a href="index">后台首页</a></li>
+		<li class="active">编辑公司信息</li>
+	</ol>
+	<div class="well">
+		<h3 class="text-center">编辑公司信息</h3>
+		<form action="{:U('introduceindex_write')}" method="post" class="form-horizontal">
+			<div class="row">
+				<div class="col-md-6 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-xs-3">公司名称：</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" placeholder="输入公司全名/品牌名称" name="title" value="{$data.title}"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-xs-3">个性签名：</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" placeholder="不要超过20个字符" name="sign" value="{$data.sign}"/>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-6 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-xs-3">战略方向：</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" placeholder="不要超过20个字符" name="direction" value="{$data.direction}"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-xs-3">人才力量：</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" placeholder="不要超过20个字符" name="people" value="{$data.people}"/>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-6 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-xs-3">库存安排：</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" placeholder="不要超过20个字符" name="arrange" value="{$data.arrange}"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-xs-3">服务团队：</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" placeholder="不要超过20个字符" name="team" value="{$data.team}"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="form-group">
+						<hr />
+						<div class="col-xs-11 text-right">
+							<input class="btn btn-success btn-lg" type="submit" value="提交"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

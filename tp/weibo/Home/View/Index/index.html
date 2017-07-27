@@ -1,0 +1,142 @@
+<!-- banner轮播图 -->
+<div id="myCarousel" class="carousel slide">
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="item active" style="background:#223240">
+			<img src="/img/banner1.jpg" alt="第一张">
+		</div>
+		<div class="item" style="background:#F5E4DC;">
+			<img src="/img/banner2.jpg" alt="第2二张">
+		</div>
+		<div class="item" style="background:#DE2A2D;">
+			<img src="/img/banner3.jpg" alt="第三张">
+		</div>
+<!-- 		<div style="background:#eee;">
+			<img src="/img/slide.png" alt="第三张">
+		</div> -->
+	</div>
+	<a href="#myCarousel" data-slide="prev" class="carousel-control left">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a href="#myCarousel" data-slide="next" class="carousel-control right">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+</div>
+
+
+<div class="tab1">
+	<div class="container">
+		<h2 class="tab-h2">{$data.title}</h2>
+		<p class="tab-p">{$data.sign}</p>
+		<div class="row">
+			<div class="col-xs-6 col">
+				<div class="media">
+					<div class="media-left">
+						<a href="#"><img src="/img/tab1-1.png" class="media-object" alt=""></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">战略方向</h4>
+						<p class="text-muted">其他：只卖产品，不提具体问题解决方案！</p>
+						<p>我们：{$data.direction}</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col">
+				<div class="media">
+					<div class="media-left">
+						<a href="#"><img src="/img/tab1-2.png" class="media-object" alt=""></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">人才力量</h4>
+						<p class="text-muted">其他：非欧美正牌大学毕业的、业界没有知名度的普通工程师！</p>
+						<p>我们：{$data.people}</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col">
+				<div class="media">
+					<div class="media-left">
+						<a href="#"><img src="/img/tab1-3.png" class="media-object" alt=""></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">库存安排</h4>
+						<p class="text-muted">其他：无法保证库存、没有时间表，无法准时发货！</p>
+						<p>我们：{$data.arrange}</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col">
+				<div class="media">
+					<div class="media-left">
+						<a href="#"><img src="/img/tab1-4.png" class="media-object" alt=""></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">服务团队</h4>
+						<p class="text-muted">其他：社会招聘的、服务水平参差不齐的普通员工！</p>
+						<p>我们：{$data.team}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="tab2">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6 col-sm-6 tab2-img">
+				<img src="/img/tab3.png" class="auto img-responsive center-block" alt="">
+			</div>
+			<div class="text col-xs-6 col-sm-6 tab2-text">
+				<h3>强大的物流网</h3>
+				<p>遍布世界的储备仓库、发货及时、解决您的库存压力。</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="tab3">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6 col-sm-6">
+				<img src="/img/tab2.png" class="auto img-responsive center-block" alt="">
+			</div>
+			<div class="text col-xs-6 col-sm-6">
+				<h3>强有力的技术支持保障</h3>
+				<p>完全定制化服务，提供了强有力的技术支持保障。</p>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	//轮播自动播放
+	$('#myCarousel').carousel({
+		//自动4秒播放
+		interval : 4000,
+	});
+
+	//设置文字垂直居中，谷歌浏览器加载图片的顺序问题，导致高度无法获取
+	$(window).load(function () {
+		$('.text').eq(0).css('margin-top', ($('.auto').eq(0).height() - $('.text').eq(0).height()) / 2 + 'px');
+	});
+
+
+	$(window).resize(function () {
+		$('.text').eq(0).css('margin-top', ($('.auto').eq(0).height() - $('.text').eq(0).height()) / 2 + 'px');
+	});
+
+	$(window).load(function () {
+		$('.text').eq(1).css('margin-top', ($('.auto').eq(1).height() - $('.text').eq(1).height()) / 2 + 'px');
+	});
+
+	$(window).resize(function () {
+		$('.text').eq(1).css('margin-top', ($('.auto').eq(1).height() - $('.text').eq(1).height()) / 2 + 'px');
+	});
+
+</script>

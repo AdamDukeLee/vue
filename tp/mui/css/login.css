@@ -1,0 +1,15 @@
+body{
+	background-color: #FFFFFF;
+}
+.mui-content{
+	background-color:#fff;
+	padding-left:10px;
+	padding-right:10px;
+}
+.mui-input-group:before,.mui-input-group:after{
+	height: 0;
+}
+h3{
+	font-weight: 400;
+}
+

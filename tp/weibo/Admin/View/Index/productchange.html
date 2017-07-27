@@ -1,0 +1,63 @@
+<div class="container">
+	<ol class="breadcrumb">
+		<li><a href="{:U('index')}">后台首页</a></li>
+		<li><a href="{:U('productmodify')}">产品管理</a></li>
+		<li class="active">修改产品信息</li>
+	</ol>
+	<div class="well center-block" style="width:700px">
+		<h3 class="text-center">修改产品信息</h3>
+		<form action="{:U('productchange')}" method="post" class="form-horizontal" enctype="multipart/form-data">
+			<div class="form-group">
+				<label class="control-label col-xs-3">产品：</label>
+				<div class="col-xs-8">
+					  <input type="text" class="form-control" name="title" value="{$data.title}"/>
+					  <input type="hidden" value="{$data.id}" name="id" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-3">简单介绍：</label>
+				<div class="col-xs-8">
+					<textarea name="abstract" class="form-control">{$data.abstract}</textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-3">选择标题图片：</label>
+				<div class="col-xs-8">
+					<img src="__ROOT__/uploads/{$data.img}" alt="" class="havep img-responsive center-block hidden img-thumbnail"/>
+					<label style="margin-top:10px;" class="btn btn-default"><span class="addlabel">修改图片</span><input type="file" class="getpicture hidden" name="upload"/></label>
+				</div>
+			</div>
+			<div class="form-group">
+				<hr />
+				<div class="col-xs-11 text-right">
+					<input type="submit" class="btn btn-danger"/>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	if(typeof FileReader != 'undefined'){
+		$('.havep').removeClass('hidden');
+		$('.getpicture').change(function(){
+			var file=this.files[0];
+			console.log(file);
+			if(file.type.match('image')){
+				var reader=new FileReader();
+				reader.readAsDataURL(file);
+				reader.onload=function(){
+					$('.havep').prop('src',this.result);
+					$('.addlabel').text('重新选择图片');
+				}
+			}else{
+				alert('您选择的不是图片');
+			}
+		})
+	}else{
+		$(".getpicture").removeClass('hidden')
+	}
+
+})
+
+</script>

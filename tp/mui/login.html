@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+    	<link href="css/mui.min.css" rel="stylesheet"/>
+    	<link rel="stylesheet" href="css/login.css" />
+    	<link rel="stylesheet" href="css/default.css" />
+	</head>
+	<body>
+		<div class="mui-content-padded" id="loginForm">
+		    <h3 class="mui-text-center">登 录</h3>
+		    <form class="mui-input-group">
+		        <div class="mui-input-row">
+		            <label for="user">账号：</label>
+		            <input type="text" v-model="postdata.user" :placeholder="postdata.user" name="user" id="user"> 
+		        </div>
+		        <div class="mui-input-row">
+		            <label for="password">密码：</label>
+		            <input type="password" v-model="postdata.password" name="password" id="password">
+		        </div>
+		        <div class="mui-content-padded"> 
+		        	<button class="mui-btn mui-btn-block mui-btn-green" type="button" @tap="toLogin" :disabled="btnDisabled">登录</button>
+		        </div>
+		    </form>
+		    <h5 class="mui-text-center">请根据电话号码联系我,获取登录密码</h5>
+		    <h5 class="mui-text-center">
+		    	<a href="tel:18516533004">18516533004</a></h5>
+		</div>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/base64.js"></script>
+		<script type="text/javascript" src="js/login.js"></script>
+	</body>
+</html>

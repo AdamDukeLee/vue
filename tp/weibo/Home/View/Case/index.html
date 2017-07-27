@@ -1,0 +1,25 @@
+<div class="jumbotron">
+	<div class="container">
+		<hgroup>
+			<h1>案例</h1>
+			<h4>和各大明星企业有着紧密合作...</h4>
+		</hgroup>
+	</div>
+</div>
+<div id="case">
+	<div class="container">
+		<div class="row">
+			<volist name="data" id="arr">
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+					<div class="thumbnail">
+						<img src="__ROOT__/uploads/{$arr.img}" alt="">
+						<div class="caption">
+							<h4>{$arr.title}</h4>
+							<p>{$arr.abstract}</p>
+						</div>
+					</div>
+				</div>
+			</volist>
+		</div>
+	</div>
+</div>

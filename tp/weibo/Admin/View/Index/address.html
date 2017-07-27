@@ -1,0 +1,58 @@
+<div class="container">
+	<ol class="breadcrumb">
+		<li><a href="index">后台首页</a></li>
+		<li class="active">编辑联系方式</li>
+	</ol>
+	<div class="well">
+		<h3 class="text-center">编辑联系方式</h3>
+		<form action="{:U('introduceindex_write')}" method="post" class="form-horizontal">
+			<div class="row">
+				<div class="col-md-6 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-xs-3">地址：</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" name="addr" value="{$data.addr}"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-xs-3">邮编：</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" name="mail" value="{$data.mail}"/>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-6 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-xs-3">电话：</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" name="phone" value="{$data.phone}"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-xs-3">邮箱：</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" name="email" value="{$data.email}"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12">
+					<div class="form-group">
+						<hr />
+						<div class="col-xs-11 text-right">
+							<input class="btn btn-success btn-lg" type="submit" value="提交"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

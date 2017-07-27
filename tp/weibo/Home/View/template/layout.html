@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>{$title|default="标题"}</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="shortcut icon" href="__ROOT__/public/img/logoxxx.ico" />
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<style>
+		.navbar-nav.nav>li:nth-of-type({$active}){
+		    color: #555;
+		    background-color: #e7e7e7;
+		}
+	</style>
+</head>
+<body>
+<!-- 导航条 -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="index.html" class="navbar-brand"><img src="/img/logo.png" alt="" height="30px"></a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="{:U('Index/index')}"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+				<li><a href="{:U('Product/index')}"><span class="glyphicon glyphicon-list"></span> 产品</a></li>
+				<li><a href="{:U('Case/index')}"><span class="glyphicon glyphicon-fire"></span> 案例</a></li>
+				<li><a href="{:U('About/index')}"><span class="glyphicon glyphicon-question-sign"></span> 关于</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+{__CONTENT__}
+<footer id="footer">
+	<div class="container">
+
+		<p>沪ICP备09046152号-8 . © 2009-2016 AMEYA360</p>
+		<p class="" ><a href="{:U('Admin/Index/index')}">管理员页面</a></p>
+	</div>
+</footer>
+</body>
+</html>

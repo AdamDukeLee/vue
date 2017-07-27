@@ -1,0 +1,35 @@
+<load href="__PUBLIC__/css/pagination.css"/>
+<div class="jumbotron">
+	<div class="container">
+		<hgroup>
+			<h1>产品展示</h1>
+			<h4>公司最新产品简单介绍</h4>
+		</hgroup>
+	</div>
+</div>
+
+<div id="information">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="container-fluid" style="padding:0;">
+					<volist name="data" id="arr">
+						<div class="row info-content">
+							<div class="col-md-5 col-sm-5 col-xs-5">
+								<img src="__ROOT__/uploads/{$arr.img}" class="img-responsive" alt="">
+							</div>
+							<div class="col-md-7 col-sm-7 col-xs-7">
+								<h4>{$arr.title}</h4>
+								<p class="hidden-xs">{$arr.abstract}</p>
+								<p>{$arr.createtime}</p>
+							</div>
+						</div>
+					</volist>
+				</div>
+			</div>
+		</div>
+		<div class="page text-right">
+			{$page}
+		</div>
+	</div>
+</div>
